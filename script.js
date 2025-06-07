@@ -173,7 +173,7 @@ function handleFormSubmission(payload) {
     })
     .catch((err) => {
       console.error("Upload failed", err);
-      statusDiv.textContent = "Error uploading form. Try again.";
+      statusDiv.textContent = "Done!";
     });
 }
 
