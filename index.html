@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bonus Receiving</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Bonus Receiving</h1>
+
+    <!-- 1) Dropdown menu at top -->
+    <label for="siteSelect" class="dropdown-label">Select Site</label>
+    <select id="siteSelect" name="siteSelect" required>
+      <option value="" disabled selected>Bonus ki site choose karo</option>
+      <option>Rajaluck777</option>
+      <option>Damangames</option>
+      <option>BigMumbai</option>
+      <option>91Club</option>
+      <option>in999</option>
+      <option>82bet</option>
+      <option>Rajagames</option>
+      <option>101game</option>
+      <option>dg club</option>
+      <option>bigdaddy games</option>
+      <option>bdgwin</option>
+      <option>55club</option>
+      <option>51club</option>
+      <option>tiranga games</option>
+      <option>okwin</option>
+      <option>goagames</option>
+      <option>tpplay</option>
+      <option>tclottery</option>
+      <option>Aviatorgod</option>
+      <option>Bounty games</option>
+      <option>1 lottery</option>
+      <option>jalwagames</option>
+      <option>Tashanwin</option>
+      <option>Diuwin</option>
+      <option>Lottery7</option>
+      <option>365 games</option>
+      <option>kwg games</option>
+      <option>bg678games</option>
+      <option>Btw win</option>
+      <option>dmwin</option>
+      <option>lottery88</option>
+      <option>6club</option>
+      <option>gbgm2 club</option>
+      <option>sikkim lottery</option>
+    </select>
+
+    <form id="bonusForm">
+      <!-- 2) Choice Section: UPI vs Bank Account -->
+      <fieldset class="choice-section">
+        <legend>Bonus ke liye account</legend>
+        <label>
+          <input type="radio" name="paymentType" value="upi" checked />
+          UPI
+        </label>
+        <label>
+          <input type="radio" name="paymentType" value="bank" />
+          Bank Account
+        </label>
+      </fieldset>
+
+      <!-- UPI Fields (visible by default) -->
+      <div id="upiFields" class="method-fields">
+        <label for="upiAddress">UPI id batao</label>
+        <input
+          type="text"
+          id="upiAddress"
+          name="upiAddress"
+          placeholder="username@bank"
+          pattern="^[A-Za-z0-9]+@[A-Za-z0-9]+$"
+          required
+        />
+        <small class="hint">sahi upi hi bharen.</small>
+
+        <label for="upiName">UPI ke person ka naam</label>
+        <input
+          type="text"
+          id="upiName"
+          name="upiName"
+          pattern="^[A-Za-z\s]+$"
+          placeholder="Your Name"
+          required
+        />
+        <small class="hint">Alphabets and spaces only.</small>
+      </div>
+
+      <!-- Bank Fields (hidden initially) -->
+      <div id="bankFields" class="method-fields hidden">
+        <label for="accNumber">Account Number</label>
+        <input
+          type="text"
+          id="accNumber"
+          name="accNumber"
+          pattern="^[0-9]{1,18}$"
+          placeholder="Up to 18 digits"
+          maxlength= "18"
+        />
+        <small class="hint">sahi number hi bharein (18 numbers tak max).</small>
+
+        <label for="ifsc">IFSC Code</label>
+        <input
+          type="text"
+          id="ifsc"
+          name="ifsc"
+          pattern="^[A-Za-z0-9]{11}$"
+          placeholder="11 alphanumeric characters"
+          maxlength= "11"
+        />
+        <small class="hint">11 akshar hi bharein.</small>
+
+        <label for="accName">Account Holder Name</label>
+        <input
+          type="text"
+          id="accName"
+          name="accName"
+          pattern="^[A-Za-z\s]+$"
+          placeholder="Your Name"
+        />
+        <small class="hint">sahi naam bharien.</small>
+      </div>
+
+      <!-- 3) File Uploads: Deposit Receipt 1, 2, 3, Wager Screenshot, ID Screenshot -->
+      <div class="upload-section">
+        <label for="depositReceipt1">Deposit Receipt 1</label>
+        <input
+          type="file"
+          id="depositReceipt1"
+          name="depositReceipt1"
+          accept="image/*"
+          required
+        />
+
+        <label for="depositReceipt2">Deposit Receipt 2</label>
+        <input
+          type="file"
+          id="depositReceipt2"
+          name="depositReceipt2"
+          accept="image/*"
+          required
+        />
+
+        <label for="depositReceipt3">Deposit Receipt 3</label>
+        <input
+          type="file"
+          id="depositReceipt3"
+          name="depositReceipt3"
+          accept="image/*"
+          required
+        />
+
+        <label for="wagerScreenshot">Wager Screenshot (1000 ka game play)</label>
+        <input
+          type="file"
+          id="wagerScreenshot"
+          name="wagerScreenshot"
+          accept="image/*"
+          required
+        />
+
+        <label for="idScreenshot">ID Screenshot (main id jahan uid dikhti hai)</label>
+        <input
+          type="file"
+          id="idScreenshot"
+          name="idScreenshot"
+          accept="image/*"
+          required
+        />
+      </div>
+
+      <button type="submit" id="submitBtn">Submit</button>
+      <div id="statusMessage" class="status hidden"></div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
