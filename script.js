@@ -162,7 +162,7 @@ function handleFormSubmission(payload) {
   statusDiv.textContent = "Uploading data to server...";
   statusDiv.classList.remove("hidden");
 
-  fetch("https://script.google.com/macros/s/AKfycbzHqsMg2O7ffKNVqnK_fp1hPeC-GzjFCkwIyI2LWeCTGJwk_WXJPsf_qk9jwXCRewtG/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxw7uMdS2KWwsG-h7G9zWJSKsOV1XiNBpKgcc2MeaJmxQwsWuPGhe88nhXFBwo_aUkR/exec", {
     method: "POST",
     body: JSON.stringify(payload)
   })
